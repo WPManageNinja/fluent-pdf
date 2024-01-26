@@ -1,6 +1,6 @@
 <?php
 
-namespace FluentFormPdf\Classes\Controller;
+namespace FluentPdf\Classes\Controller;
 
 class Activator
 {

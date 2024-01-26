@@ -1,8 +1,8 @@
 <?php
 
-namespace FluentFormPdf\Classes;
+namespace FluentPdf\Classes;
 
-use FluentFormPdf\Classes\Controller\GlobalFontManager;
+use FluentPdf\Classes\Controller\GlobalFontManager;
 
 
 class AdminMenuHandler
@@ -16,7 +16,7 @@ class AdminMenuHandler
 
     public function addMenu()
     {
-        $title = __('Fluent PDF', 'fluentform-pdf');
+        $title = __('Fluent PDF', 'fluent-pdf');
 
         add_menu_page(
             $title,
@@ -30,8 +30,8 @@ class AdminMenuHandler
 
         add_submenu_page(
             'fluent_pdf.php',
-            __('Dashboard', 'fluentform-pdf'),
-            __('Dashboard', 'fluentform-pdf'),
+            __('Dashboard', 'fluent-pdf'),
+            __('Dashboard', 'fluent-pdf'),
             'manage_options',
             'fluent_pdf.php',
             array($this, 'render')
@@ -39,8 +39,8 @@ class AdminMenuHandler
 
         add_submenu_page(
             'fluent_pdf.php',
-            __('Global Settings', 'fluentform-pdf'),
-            __('Global Settings', 'fluentform-pdf'),
+            __('Global Settings', 'fluent-pdf'),
+            __('Global Settings', 'fluent-pdf'),
             'manage_options',
             'fluent_pdf.php/settings',
             array($this, 'renderSettings')
@@ -49,11 +49,11 @@ class AdminMenuHandler
 
     public function renderSettings()
     {
-        Vite::enqueueScript('fluent-pdf-script-boot', 'admin/start.js', array('jquery'), FLUENTFORM_PDF_VERSION, true);
-        Vite::enqueueStyle('fluent-pdf-style-boot', 'scss/admin/app.scss', array(), FLUENTFORM_PDF_VERSION);
+        Vite::enqueueScript('fluent-pdf-script-boot', 'admin/start.js', array('jquery'), FLUENT_PDF_VERSION, true);
+        Vite::enqueueStyle('fluent-pdf-style-boot', 'scss/admin/app.scss', array(), FLUENT_PDF_VERSION);
 
         $fluentPdfVars = apply_filters('fluent-pdf/admin_app_vars', array(
-            'assets_url' => FLUENTFORM_PDF_URL . 'assets/',
+            'assets_url' => FLUENT_PDF_URL . 'assets/',
             'ajaxUrl' => admin_url('admin-ajax.php'),
             'nonce' => wp_create_nonce('fluent_pdf_nonce'),
         ));

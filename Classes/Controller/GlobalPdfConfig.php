@@ -1,11 +1,11 @@
 <?php
 
-namespace FluentFormPdf\Classes\Controller;
+namespace FluentPdf\Classes\Controller;
 
 
 class GlobalPdfConfig
 {
-    const OPTIONKEY = '_fluentform_pdf_settings';
+    const OPTIONKEY = '_fluent_pdf_settings';
 
     public function globalSettings()
     {

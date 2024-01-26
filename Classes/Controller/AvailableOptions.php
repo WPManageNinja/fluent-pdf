@@ -1,8 +1,8 @@
 <?php
 
-namespace FluentFormPdf\Classes\Controller;
+namespace FluentPdf\Classes\Controller;
 
-use FluentFormPdf\Support\Arr;
+use FluentPdf\Support\Arr;
 
 class AvailableOptions
 {
@@ -92,7 +92,7 @@ class AvailableOptions
             'entry_view' => 'I',
             'reverse_text' => 'no',
             'accent_color' => '#CCCCCC',
-            'filename' => 'fluentformpdf'
+            'filename' => 'fluentpdf'
         ];
     }
 
@@ -207,59 +207,59 @@ class AvailableOptions
         $workingPath = wp_upload_dir()['basedir'];
 
         $workingDir = apply_filters_deprecated(
-            'fluentform_pdf_working_dir',
+            'fluent_pdf_working_dir',
             [
                 $workingPath . '/FLUENT_PDF_TEMPLATES'
             ],
             FLUENTPDF_FRAMEWORK_UPGRADE,
-            'fluentform/pdf_working_dir',
-            'Use fluentform/pdf_working_dir instead of fluentform_pdf_working_dir.'
+            'fluent/pdf_working_dir',
+            'Use fluent/pdf_working_dir instead of fluent_pdf_working_dir.'
         );
 
-        $workingDir = apply_filters('fluentform/pdf_working_dir', $workingPath . '/FLUENT_PDF_TEMPLATES');
+        $workingDir = apply_filters('fluent/pdf_working_dir', $workingPath . '/FLUENT_PDF_TEMPLATES');
 
         $tmpDir = apply_filters_deprecated(
-            'fluentform_pdf_temp_dir',
+            'fluent_pdf_temp_dir',
             [
                 $workingDir . '/temp'
             ],
             FLUENTPDF_FRAMEWORK_UPGRADE,
-            'fluentform/pdf_temp_dir',
-            'Use fluentform/pdf_temp_dir instead of fluentform_pdf_temp_dir.'
+            'fluent/pdf_temp_dir',
+            'Use fluent/pdf_temp_dir instead of fluent_pdf_temp_dir.'
         );
 
-        $tmpDir = apply_filters('fluentform/pdf_temp_dir', $workingDir . '/temp');
+        $tmpDir = apply_filters('fluent/pdf_temp_dir', $workingDir . '/temp');
 
         $cacheDir = apply_filters_deprecated(
-            'fluentform_pdf_cache_dir',
+            'fluent_pdf_cache_dir',
             [
                 $workingDir . '/pdfCache'
             ],
             FLUENTPDF_FRAMEWORK_UPGRADE,
-            'fluentform/pdf_cache_dir',
-            'Use fluentform/pdf_cache_dir instead of fluentform_pdf_cache_dir.'
+            'fluent/pdf_cache_dir',
+            'Use fluent/pdf_cache_dir instead of fluent_pdf_cache_dir.'
         );
 
-        $cacheDir = apply_filters('fluentform/pdf_cache_dir', $workingDir . '/pdfCache');
+        $cacheDir = apply_filters('fluent/pdf_cache_dir', $workingDir . '/pdfCache');
 
         $fontDir = apply_filters_deprecated(
-            'fluentform_pdf_font_dir',
+            'fluent_pdf_font_dir',
             [
                 $workingDir . '/fonts'
             ],
             FLUENTPDF_FRAMEWORK_UPGRADE,
-            'fluentform/pdf_font_dir',
-            'Use fluentform/pdf_font_dir instead of fluentform_pdf_font_dir.'
+            'fluent/pdf_font_dir',
+            'Use fluent/pdf_font_dir instead of fluent_pdf_font_dir.'
         );
 
-        $fontDir = apply_filters('fluentform/pdf_font_dir', $workingDir . '/fonts');
+        $fontDir = apply_filters('fluent/pdf_font_dir', $workingDir . '/fonts');
 
 
         return [
             'workingDir' => $workingDir,
-            'tempDir' => apply_filters('fluentform/pdf_temp_dir', $workingDir . '/temp'),
-            'pdfCacheDir' => apply_filters('fluentform/pdf_cache_dir', $workingDir . '/pdfCache'),
-            'fontDir' => apply_filters('fluentform/pdf_font_dir', $workingDir . '/fonts')
+            'tempDir' => apply_filters('fluent/pdf_temp_dir', $workingDir . '/temp'),
+            'pdfCacheDir' => apply_filters('fluent/pdf_cache_dir', $workingDir . '/pdfCache'),
+            'fontDir' => apply_filters('fluent/pdf_font_dir', $workingDir . '/fonts')
         ];
     }
 
@@ -323,16 +323,16 @@ class AvailableOptions
         ];
 
         $fontList = apply_filters_deprecated(
-            'fluentform_pdf_font_list',
+            'fluent_pdf_font_list',
             [
                 $fonts
             ],
             FLUENTPDF_FRAMEWORK_UPGRADE,
-            'fluentform/pdf_font_list',
-            'Use fluentform/pdf_font_list instead of fluentform_pdf_font_list.'
+            'fluent/pdf_font_list',
+            'Use fluent/pdf_font_list instead of fluent_pdf_font_list.'
         );
 
-        $fontList = apply_filters('fluentform/pdf_font_list', $fonts);
+        $fontList = apply_filters('fluent/pdf_font_list', $fonts);
 
         return $fontList;
     }

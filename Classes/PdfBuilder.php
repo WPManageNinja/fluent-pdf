@@ -1,9 +1,9 @@
 <?php
 
-namespace FluentFormPdf\Classes;
+namespace FluentPdf\Classes;
 
-use FluentFormPdf\Support\Arr;
-use FluentFormPdf\API\Pdf;
+use FluentPdf\Support\Arr;
+use FluentPdf\API\Pdf;
 
 class PdfBuilder
 {

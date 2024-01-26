@@ -1,9 +1,9 @@
 <?php
-namespace FluentFormPdf\API;
+namespace FluentPdf\API;
 
-use FluentFormPdf\Classes\PdfBuilder;
-use FluentFormPdf\Classes\Helper\Helper;
-use FluentFormPdf\Classes\Controller\GlobalPdfConfig;
+use FluentPdf\Classes\PdfBuilder;
+use FluentPdf\Classes\Helper\Helper;
+use FluentPdf\Classes\Controller\GlobalPdfConfig;
 
 class Pdf
 {

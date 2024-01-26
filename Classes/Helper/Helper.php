@@ -1,7 +1,7 @@
 <?php
-namespace FluentFormPdf\Classes\Helper;
+namespace FluentPdf\Classes\Helper;
 
-use FluentFormPdf\Support\Arr;
+use FluentPdf\Support\Arr;
 
 class Helper
 {

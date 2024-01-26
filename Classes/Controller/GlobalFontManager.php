@@ -1,12 +1,12 @@
 <?php
-namespace FluentFormPdf\Classes\Controller;
+namespace FluentPdf\Classes\Controller;
 
-use FluentFormPdf\Classes\Vite;
-use FluentFormPdf\Classes\PdfBuilder;
+use FluentPdf\Classes\Vite;
+use FluentPdf\Classes\PdfBuilder;
 
 class GlobalFontManager
 {
-    protected $optionKey = '_fluentform_pdf_settings';
+    protected $optionKey = '_fluent_pdf_settings';
 
     public function registerAjax()
     {
@@ -25,7 +25,7 @@ class GlobalFontManager
 
         $route = sanitize_text_field($_REQUEST['route']);
 
-        // Acl::verify('fluentform_forms_manager');
+        // Acl::verify('fluent_forms_manager');
 
         if (isset($maps[$route])) {
             $this->{$maps[$route]}();
@@ -47,7 +47,7 @@ class GlobalFontManager
         update_option($this->optionKey, $settings);
         
         wp_send_json_success([
-            'message' => __('Settings successfully updated', 'fluentform-pdf')
+            'message' => __('Settings successfully updated', 'fluent-pdf')
         ], 200);
     }
 
@@ -141,12 +141,12 @@ class GlobalFontManager
 
     public function renderGlobalPage()
     {        
-        Vite::enqueueScript('fluentform_pdf_admin', 'admin/FontManager/FontManager.js', array('jquery'), FLUENTFORM_PDF_VERSION, true);
+        Vite::enqueueScript('fluent_pdf_admin', 'admin/FontManager/FontManager.js', array('jquery'), FLUENT_PDF_VERSION, true);
 
         $fontManager = new FontDownloader();
         $downloadableFiles = $fontManager->getDownloadableFonts();
 
-        wp_localize_script('fluentform_pdf_admin', 'fluent_pdf_admin', [
+        wp_localize_script('fluent_pdf_admin', 'fluent_pdf_admin', [
             'ajaxUrl' => admin_url('admin-ajax.php'),
             'nonce' => wp_create_nonce('fluent_pdf_admin_nonce'),
         ]);
@@ -162,7 +162,7 @@ class GlobalFontManager
             }
         }
 
-        include FLUENTFORM_PDF_PATH . 'views/admin_screen.php';
+        include FLUENT_PDF_PATH . 'views/admin_screen.php';
     }
 
     private function globalSettings()

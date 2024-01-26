@@ -5,10 +5,10 @@
     },
     "autoload": {
         "psr-4": {
-            "FluentFormPdf\\Modules\\": "Modules/",
-            "FluentFormPdf\\Classes\\": "Classes/",
-            "FluentFormPdf\\Support\\": "Support/",
-            "FluentFormPdf\\API\\"    : "API/"
+            "FluentPdf\\Modules\\": "Modules/",
+            "FluentPdf\\Classes\\": "Classes/",
+            "FluentPdf\\Support\\": "Support/",
+            "FluentPdf\\API\\"    : "API/"
         }
     }
 }

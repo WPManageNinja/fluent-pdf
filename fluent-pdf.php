@@ -7,7 +7,7 @@
  * Author: WPManageNinja LLC
  * Author URI:  https://wpmanageninja.com
  * Version: 1.2.0
- * Text Domain: fluentform-pdf
+ * Text Domain: fluent-pdf
  * Domain Path: /assets/languages
  */
 
@@ -30,25 +30,25 @@
  */
 
 defined('ABSPATH') or die;
-define('FLUENTFORM_PDF_VERSION', '1.2.0');
-define('FLUENTFORM_PDF_PATH', plugin_dir_path(__FILE__));
+define('FLUENT_PDF_VERSION', '1.2.0');
+define('FLUENT_PDF_PATH', plugin_dir_path(__FILE__));
 define('FLUENT_PDF_PATH', plugin_dir_path(__FILE__)); // For backward compatibility
-define('FLUENTFORM_PDF_URL', plugin_dir_url(__FILE__));
+define('FLUENT_PDF_URL', plugin_dir_url(__FILE__));
 define('FLUENTPDF_FRAMEWORK_UPGRADE', '1.0.0'); //TO REMOVE
 
 define('FLUENT_PDF_DEVELOPMENT', 'yes');
 
-require_once FLUENTFORM_PDF_PATH . 'vendor/autoload.php';
-require_once FLUENTFORM_PDF_PATH . 'API/Pdf.php';
-class FluentFormPdf
+require_once FLUENT_PDF_PATH . 'vendor/autoload.php';
+require_once FLUENT_PDF_PATH . 'API/Pdf.php';
+class FluentPdf
 {
     public function boot()
     {
         if (!apply_filters('fluent_pdf_hide_menu', __return_false())) {
-            (new FluentFormPdf\Classes\AdminMenuHandler())->register();
+            (new FluentPdf\Classes\AdminMenuHandler())->register();
         };
 
-        (new FluentFormPdf\Classes\PdfBuilder())->register();
+        (new FluentPdf\Classes\PdfBuilder())->register();
         
         do_action('fluent_pdf_loaded');
     }
@@ -56,24 +56,24 @@ class FluentFormPdf
 
 add_action('plugins_loaded', function () {
     load_plugin_textdomain(
-        'fluentform-pdf',
+        'fluent-pdf',
         false,
         basename(dirname(__FILE__)) . 'assets/languages'
     );
 
-    (new FluentFormPdf())->boot();
+    (new FluentPdf())->boot();
 });
 
 add_action('init', function () {
-    (new FluentFormPdf\Classes\Controller\GlobalFontManager())->registerAjax();
+    (new FluentPdf\Classes\Controller\GlobalFontManager())->registerAjax();
 });
 
 register_activation_hook(__FILE__, function () {
-    // require_once FLUENTFORM_PDF_PATH . '/Classes/Controller/Activator.php';
-    FluentFormPdf\Classes\Controller\Activator::activate();
+    // require_once FLUENT_PDF_PATH . '/Classes/Controller/Activator.php';
+    FluentPdf\Classes\Controller\Activator::activate();
 });
 
 register_deactivation_hook(__FILE__, function () {
-    // require_once FLUENTFORM_PDF_PATH . '/Classes/Controller/Activator.php';
-    FluentFormPdf\Classes\Controller\Activator::deactivate();
+    // require_once FLUENT_PDF_PATH . '/Classes/Controller/Activator.php';
+    FluentPdf\Classes\Controller\Activator::deactivate();
 });

@@ -1,6 +1,6 @@
 <?php
 
-namespace FluentFormPdf\Support;
+namespace FluentPdf\Support;
 
 class Arr
 {

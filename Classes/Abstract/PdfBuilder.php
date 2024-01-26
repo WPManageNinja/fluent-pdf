@@ -1,8 +1,8 @@
 <?php
 
-namespace FluentFormPdf\Classes\Abstract;
+namespace FluentPdf\Classes\Abstract;
 
-use FluentFormPdf\Classes\PdfBuilder as ClassesPdfBuilder;
+use FluentPdf\Classes\PdfBuilder as ClassesPdfBuilder;
 
 abstract class PdfBuilder
 {

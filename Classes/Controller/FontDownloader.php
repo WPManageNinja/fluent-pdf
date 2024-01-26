@@ -1,6 +1,6 @@
 <?php
 
-namespace FluentFormPdf\Classes\Controller;
+namespace FluentPdf\Classes\Controller;
 
 class FontDownloader
 {
@@ -9,7 +9,7 @@ class FontDownloader
 
     public function getCoreFonts()
     {
-        $json = file_get_contents(FLUENTFORM_PDF_PATH.'/core-fonts.json');
+        $json = file_get_contents(FLUENT_PDF_PATH.'/core-fonts.json');
         return json_decode($json, true);
     }
 

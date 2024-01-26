@@ -1,8 +1,8 @@
 <?php
 
-namespace FluentFormPdf\Classes\Controller;
+namespace FluentPdf\Classes\Controller;
 
-use FluentFormPdf\Classes\PdfBuilder;
+use FluentPdf\Classes\PdfBuilder;
 
 class PdfManager
 {

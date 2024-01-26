@@ -1,6 +1,6 @@
 <?php
 
-namespace FluentFormPdf\Classes;
+namespace FluentPdf\Classes;
 
 class Vite
 {
@@ -134,7 +134,7 @@ class Vite
 
     private static function getAssetPath()
     {
-        return FLUENTFORM_PDF_URL . 'assets/';
+        return FLUENT_PDF_URL . 'assets/';
     }
 
     private static function getProductionFilePath($file)
