@@ -1,0 +1,14 @@
+{
+
+    "require": {
+        "mpdf/mpdf": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "FluentFormPdf\\Modules\\": "Modules/",
+            "FluentFormPdf\\Classes\\": "Classes/",
+            "FluentFormPdf\\Support\\": "Support/",
+            "FluentFormPdf\\API\\"    : "API/"
+        }
+    }
+}

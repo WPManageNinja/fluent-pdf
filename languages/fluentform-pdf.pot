@@ -1,0 +1,114 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Fluentforms pdf\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-15 12:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.3; wp-5.4"
+
+#: Classes/Templates/GeneralTemplate.php:50
+msgid "Conditional PDF Body Content is supported in Fluent Forms Pro Version"
+msgstr ""
+
+#: Classes/Templates/InvoiceTemplate.php:146
+msgid "Customer Details"
+msgstr ""
+
+#. Description of the plugin
+msgid "Download entries as pdf with multiple template."
+msgstr ""
+
+#: Classes/Controller/GlobalPdfManager.php:362
+msgid "Feed name is required"
+msgstr ""
+
+#: Classes/Controller/GlobalPdfManager.php:387
+msgid "Feed successfully deleted"
+msgstr ""
+
+#. Name of the plugin
+msgid "Fluent Forms PDF Generator"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://wpmanageninja.com"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://wpmanageninja.com/downloads/fluentform-pro-add-on/"
+msgstr ""
+
+#: Classes/Templates/InvoiceTemplate.php:142
+msgid "Order Number:"
+msgstr ""
+
+#: Classes/Templates/InvoiceTemplate.php:143
+msgid "Payment Date:"
+msgstr ""
+
+#: Classes/Templates/InvoiceTemplate.php:159
+msgid "Payment Details"
+msgstr ""
+
+#: Classes/Controller/GlobalPdfManager.php:737
+msgid "PDF"
+msgstr ""
+
+#: Classes/Controller/GlobalPdfManager.php:490
+msgid "PDF Downloads"
+msgstr ""
+
+#: Classes/Controller/GlobalPdfManager.php:84
+msgid "PDF Feeds"
+msgstr ""
+
+#: Classes/Controller/GlobalPdfManager.php:75
+msgid "PDF Settings"
+msgstr ""
+
+#: Classes/Templates/InvoiceTemplate.php:139
+msgid "RECEIPT:"
+msgstr ""
+
+#: Classes/Controller/GlobalPdfManager.php:152
+#: Classes/Controller/GlobalPdfManager.php:373
+msgid "Settings successfully updated"
+msgstr ""
+
+#: Classes/Controller/GlobalPdfManager.php:215
+#: Classes/Controller/GlobalPdfManager.php:289
+msgid "Sorry! No template Class found!"
+msgstr ""
+
+#: Classes/Controller/GlobalPdfManager.php:206
+#: Classes/Controller/GlobalPdfManager.php:280
+msgid "Sorry! No template found!"
+msgstr ""
+
+#: Classes/Controller/GlobalPdfManager.php:782
+msgid "Sorry! You have to login first."
+msgstr ""
+
+#. Author of the plugin
+msgid "WPManageNinja LLC"
+msgstr ""
+
+#: Classes/Templates/GeneralTemplate.php:48
+#, php-format
+msgid ""
+"You can use Conditional Content in PDF body, for details please check this "
+"%s. "
+msgstr ""
+
+#: Classes/Controller/GlobalPdfManager.php:800
+msgid "You don't have permission to download the PDF."
+msgstr ""

@@ -1,0 +1,282 @@
+[
+  {
+    "name": "AboriginalSansREGULAR.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/AboriginalSansREGULAR.ttf"
+  },
+  {
+    "name": "Abyssinica_SIL.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/Abyssinica_SIL.ttf"
+  },
+  {
+    "name": "Aegean.otf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/Aegean.otf"
+  },
+  {
+    "name": "Aegyptus.otf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/Aegyptus.otf"
+  },
+  {
+    "name": "Akkadian.otf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/Akkadian.otf"
+  },
+  {
+    "name": "DBSILBR.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/DBSILBR.ttf"
+  },
+  {
+    "name": "DejaVuSans-Bold.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/DejaVuSans-Bold.ttf"
+  },
+  {
+    "name": "DejaVuSans-BoldOblique.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/DejaVuSans-BoldOblique.ttf"
+  },
+  {
+    "name": "DejaVuSans-Oblique.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/DejaVuSans-Oblique.ttf"
+  },
+  {
+    "name": "DejaVuSans.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/DejaVuSans.ttf"
+  },
+  {
+    "name": "DejaVuSansCondensed-Bold.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/DejaVuSansCondensed-Bold.ttf"
+  },
+  {
+    "name": "DejaVuSansCondensed-BoldOblique.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/DejaVuSansCondensed-BoldOblique.ttf"
+  },
+  {
+    "name": "DejaVuSansCondensed-Oblique.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/DejaVuSansCondensed-Oblique.ttf"
+  },
+  {
+    "name": "DejaVuSansCondensed.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/DejaVuSansCondensed.ttf"
+  },
+  {
+    "name": "DejaVuSansMono-Bold.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/DejaVuSansMono-Bold.ttf"
+  },
+  {
+    "name": "DejaVuSansMono-BoldOblique.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/DejaVuSansMono-BoldOblique.ttf"
+  },
+  {
+    "name": "DejaVuSansMono-Oblique.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/DejaVuSansMono-Oblique.ttf"
+  },
+  {
+    "name": "DejaVuSansMono.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/DejaVuSansMono.ttf"
+  },
+  {
+    "name": "DejaVuSerif-Bold.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/DejaVuSerif-Bold.ttf"
+  },
+  {
+    "name": "DejaVuSerif-BoldItalic.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/DejaVuSerif-BoldItalic.ttf"
+  },
+  {
+    "name": "DejaVuSerif-Italic.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/DejaVuSerif-Italic.ttf"
+  },
+  {
+    "name": "DejaVuSerif.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/DejaVuSerif.ttf"
+  },
+  {
+    "name": "DejaVuSerifCondensed-Bold.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/DejaVuSerifCondensed-Bold.ttf"
+  },
+  {
+    "name": "DejaVuSerifCondensed-BoldItalic.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/DejaVuSerifCondensed-BoldItalic.ttf"
+  },
+  {
+    "name": "DejaVuSerifCondensed-Italic.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/DejaVuSerifCondensed-Italic.ttf"
+  },
+  {
+    "name": "DejaVuSerifCondensed.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/DejaVuSerifCondensed.ttf"
+  },
+  {
+    "name": "Dhyana-Bold.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/Dhyana-Bold.ttf"
+  },
+  {
+    "name": "Dhyana-Regular.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/Dhyana-Regular.ttf"
+  },
+  {
+    "name": "FreeMono.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/FreeMono.ttf"
+  },
+  {
+    "name": "FreeMonoBold.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/FreeMonoBold.ttf"
+  },
+  {
+    "name": "FreeMonoBoldOblique.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/FreeMonoBoldOblique.ttf"
+  },
+  {
+    "name": "FreeMonoOblique.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/FreeMonoOblique.ttf"
+  },
+  {
+    "name": "FreeSans.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/FreeSans.ttf"
+  },
+  {
+    "name": "FreeSansBold.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/FreeSansBold.ttf"
+  },
+  {
+    "name": "FreeSansBoldOblique.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/FreeSansBoldOblique.ttf"
+  },
+  {
+    "name": "FreeSansOblique.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/FreeSansOblique.ttf"
+  },
+  {
+    "name": "FreeSerif.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/FreeSerif.ttf"
+  },
+  {
+    "name": "FreeSerifBold.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/FreeSerifBold.ttf"
+  },
+  {
+    "name": "FreeSerifBoldItalic.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/FreeSerifBoldItalic.ttf"
+  },
+  {
+    "name": "FreeSerifItalic.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/FreeSerifItalic.ttf"
+  },
+  {
+    "name": "Garuda-Bold.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/Garuda-Bold.ttf"
+  },
+  {
+    "name": "Garuda-BoldOblique.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/Garuda-BoldOblique.ttf"
+  },
+  {
+    "name": "Garuda-Oblique.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/Garuda-Oblique.ttf"
+  },
+  {
+    "name": "Garuda.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/Garuda.ttf"
+  },
+  {
+    "name": "Jomolhari.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/Jomolhari.ttf"
+  },
+  {
+    "name": "KhmerOS.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/KhmerOS.ttf"
+  },
+  {
+    "name": "LateefRegOT.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/LateefRegOT.ttf"
+  },
+  {
+    "name": "Lohit-Kannada.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/Lohit-Kannada.ttf"
+  },
+  {
+    "name": "Padauk-book.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/Padauk-book.ttf"
+  },
+  {
+    "name": "Pothana2000.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/Pothana2000.ttf"
+  },
+  {
+    "name": "Quivira.otf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/Quivira.otf"
+  },
+  {
+    "name": "Sun-ExtA.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/Sun-ExtA.ttf"
+  },
+  {
+    "name": "Sun-ExtB.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/Sun-ExtB.ttf"
+  },
+  {
+    "name": "SundaneseUnicode-1.0.5.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/SundaneseUnicode-1.0.5.ttf"
+  },
+  {
+    "name": "SyrCOMEdessa.otf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/SyrCOMEdessa.otf"
+  },
+  {
+    "name": "TaameyDavidCLM-Medium.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/TaameyDavidCLM-Medium.ttf"
+  },
+  {
+    "name": "TaiHeritagePro.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/TaiHeritagePro.ttf"
+  },
+  {
+    "name": "Tharlon-Regular.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/Tharlon-Regular.ttf"
+  },
+  {
+    "name": "UnBatang_0613.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/UnBatang_0613.ttf"
+  },
+  {
+    "name": "Uthman.otf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/Uthman.otf"
+  },
+  {
+    "name": "XB Riyaz.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/XB%20Riyaz.ttf"
+  },
+  {
+    "name": "XB RiyazBd.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/XB%20RiyazBd.ttf"
+  },
+  {
+    "name": "XB RiyazBdIt.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/XB%20RiyazBdIt.ttf"
+  },
+  {
+    "name": "XB RiyazIt.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/XB%20RiyazIt.ttf"
+  },
+  {
+    "name": "ZawgyiOne.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/ZawgyiOne.ttf"
+  },
+  {
+    "name": "ayar.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/ayar.ttf"
+  },
+  {
+    "name": "damase_v.2.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/damase_v.2.ttf"
+  },
+  {
+    "name": "kaputaunicode.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/kaputaunicode.ttf"
+  },
+  {
+    "name": "lannaalif-v1-03.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/lannaalif-v1-03.ttf"
+  },
+  {
+    "name": "ocrb10.ttf",
+    "download_url": "https://raw.githubusercontent.com/WPManageNinja/mpdf-core-fonts/master/ocrb10.ttf"
+  }
+]
