@@ -1,5 +1,5 @@
 composer.phar
-/vendor/
+# /vendor/
 node_modules
 svn
 .DS_Store

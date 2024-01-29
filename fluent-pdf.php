@@ -30,6 +30,8 @@
  */
 
 defined('ABSPATH') or die;
+
+define('FLUENT_PDF', true);
 define('FLUENT_PDF_VERSION', '1.0.0');
 define('FLUENT_PDF_PATH', plugin_dir_path(__FILE__)); // For backward compatibility
 define('FLUENT_PDF_URL', plugin_dir_url(__FILE__));
