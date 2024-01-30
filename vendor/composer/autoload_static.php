@@ -4,9 +4,25 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitaff2ea21b2b73eec92c319fdf9a4e333
+class ComposerStaticInitbf76bb6d742f79337d0c06781186fd88
 {
+    public static $files = array (
+        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
+        's' => 
+        array (
+            'setasign\\Fpdi\\' => 14,
+        ),
+        'P' => 
+        array (
+            'Psr\\Log\\' => 8,
+        ),
+        'M' => 
+        array (
+            'Mpdf\\' => 5,
+        ),
         'F' => 
         array (
             'FluentPdf\\Support\\' => 18,
@@ -14,9 +30,25 @@ class ComposerStaticInitaff2ea21b2b73eec92c319fdf9a4e333
             'FluentPdf\\Classes\\' => 18,
             'FluentPdf\\API\\' => 14,
         ),
+        'D' => 
+        array (
+            'DeepCopy\\' => 9,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'setasign\\Fpdi\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/setasign/fpdi/src',
+        ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
+        'Mpdf\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mpdf/mpdf/src',
+        ),
         'FluentPdf\\Support\\' => 
         array (
             0 => __DIR__ . '/../..' . '/Support',
@@ -33,6 +65,10 @@ class ComposerStaticInitaff2ea21b2b73eec92c319fdf9a4e333
         array (
             0 => __DIR__ . '/../..' . '/API',
         ),
+        'DeepCopy\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
+        ),
     );
 
     public static $classMap = array (
@@ -42,9 +78,9 @@ class ComposerStaticInitaff2ea21b2b73eec92c319fdf9a4e333
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitaff2ea21b2b73eec92c319fdf9a4e333::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitaff2ea21b2b73eec92c319fdf9a4e333::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitaff2ea21b2b73eec92c319fdf9a4e333::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitbf76bb6d742f79337d0c06781186fd88::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitbf76bb6d742f79337d0c06781186fd88::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitbf76bb6d742f79337d0c06781186fd88::$classMap;
 
         }, null, ClassLoader::class);
     }
