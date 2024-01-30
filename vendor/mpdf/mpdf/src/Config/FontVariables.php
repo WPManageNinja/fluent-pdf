@@ -115,12 +115,6 @@ class FontVariables
 					'I' => "DejaVuSerif-Italic.ttf",
 					'BI' => "DejaVuSerif-BoldItalic.ttf",
 				],
-				"dejavuserifcondensed" => [
-					'R' => "DejaVuSerifCondensed.ttf",
-					'B' => "DejaVuSerifCondensed-Bold.ttf",
-					'I' => "DejaVuSerifCondensed-Italic.ttf",
-					'BI' => "DejaVuSerifCondensed-BoldItalic.ttf",
-				],
 				"dejavusansmono" => [
 					'R' => "DejaVuSansMono.ttf",
 					'B' => "DejaVuSansMono-Bold.ttf",
