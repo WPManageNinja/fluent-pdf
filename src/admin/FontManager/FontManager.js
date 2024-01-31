@@ -51,7 +51,6 @@ jQuery(document).ready(function ($) {
 
         init() {
             $('#ff_download_fonts').on('click', (e) => {
-                console.log('hola');
                 e.preventDefault();
                 this.initDownloadFonts();
             });

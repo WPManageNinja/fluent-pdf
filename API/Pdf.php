@@ -12,7 +12,7 @@ class Pdf
 
     public function __construct($config = [])
     {
-        $this->mpdf = new \Mpdf\Mpdf($config);
+        // $this->mpdf = new \Mpdf\Mpdf($config);
     }
 
     /**
