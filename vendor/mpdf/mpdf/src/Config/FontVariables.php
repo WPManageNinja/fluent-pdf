@@ -109,6 +109,20 @@ class FontVariables
 					'useOTL' => 0xFF,
 					'useKashida' => 75,
 				],
+				"dejavuserif" => [
+					'R' => "DejaVuSerif.ttf",
+					'B' => "DejaVuSerif-Bold.ttf",
+					'I' => "DejaVuSerif-Italic.ttf",
+					'BI' => "DejaVuSerif-BoldItalic.ttf",
+				],
+				"dejavusansmono" => [
+					'R' => "DejaVuSansMono.ttf",
+					'B' => "DejaVuSansMono-Bold.ttf",
+					'I' => "DejaVuSansMono-Oblique.ttf",
+					'BI' => "DejaVuSansMono-BoldOblique.ttf",
+					'useOTL' => 0xFF,
+					'useKashida' => 75,
+				],
 				"freesans" => [
 					'R' => "FreeSans.ttf",
 					'B' => "FreeSansBold.ttf",
@@ -274,6 +288,7 @@ class FontVariables
 				"dejavusanscondensed",
 				"dejavusans",
 				"dejavuserifcondensed",
+				"dejavuserif",
 				"dejavusansmono",
 			],
 
@@ -291,7 +306,7 @@ class FontVariables
 				'humanist777', 'humanist777black', 'humanist777light', 'futura', 'hobo', 'segoeprint'
 			],
 
-			'serif_fonts' => ['dejavuserifcondensed', 'serif', 'freeserif', 'liberationserif',
+			'serif_fonts' => ['dejavuserifcondensed', 'serif', 'dejavuserif', 'freeserif', 'liberationserif',
 				'timesnewroman', 'times', 'centuryschoolbookl', 'palatinolinotype', 'centurygothic',
 				'bookmanoldstyle', 'bookantiqua', 'cyberbit', 'cambria',
 				'norasi', 'charis', 'palatino', 'constantia', 'georgia', 'albertus', 'xbzar', 'algerian', 'garamond',
