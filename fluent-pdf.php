@@ -37,7 +37,7 @@ define('FLUENT_PDF_PATH', plugin_dir_path(__FILE__)); // For backward compatibil
 define('FLUENT_PDF_URL', plugin_dir_url(__FILE__));
 define('FLUENTPDF_FRAMEWORK_UPGRADE', '1.0.0'); //TO REMOVE
 
-define('FLUENT_PDF_DEVELOPMENT', 'yes');
+define('FLUENT_PDF_PRODUCTION', 'yes');
 
 require_once FLUENT_PDF_PATH . 'vendor/autoload.php';
 require_once FLUENT_PDF_PATH . 'API/Pdf.php';
