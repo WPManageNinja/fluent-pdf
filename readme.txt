@@ -4,7 +4,7 @@ Tags: PDF, Form To PDF, attachment, fluent forms
 Requires at least: 5.0
 Tested up to: 6.2.2
 Requires PHP: 5.6
-Stable tag: 1.2.0
+Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,7 +42,7 @@ You can also send these PDF files via emails to your users and make them passwor
 
 == Changelog ==
 
-== 1.2.0 - August 28, 2023 =
+== 1.0.0 - August 28, 2023 =
 - Adds Dynamic module for third party plugins
 
 = 1.1.7 - June 22, 2023 =
