@@ -6,7 +6,7 @@
  * Description: Download and Email entries as pdf with multiple template for all Fluent Products. 
  * Author: WPManageNinja LLC
  * Author URI:  https://wpmanageninja.com
- * Version: 1.2.0
+ * Version: 1.0.0
  * Text Domain: fluent-pdf
  * Domain Path: /assets/languages
  */
