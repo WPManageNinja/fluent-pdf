@@ -1,22 +1,10 @@
 {
-  "node_modules/element-plus/theme-chalk/fonts/element-icons.woff": {
-    "file": "assets/element-icons.9c88a535.woff",
-    "src": "node_modules/element-plus/theme-chalk/fonts/element-icons.woff"
-  },
-  "node_modules/element-plus/theme-chalk/fonts/element-icons.ttf": {
-    "file": "assets/element-icons.de5eb258.ttf",
-    "src": "node_modules/element-plus/theme-chalk/fonts/element-icons.ttf"
-  },
   "src/admin/start.js": {
     "file": "start.js",
     "src": "src/admin/start.js",
     "isEntry": true,
     "css": [
-      "assets/start.8535ab5d.css"
-    ],
-    "assets": [
-      "assets/element-icons.9c88a535.woff",
-      "assets/element-icons.de5eb258.ttf"
+      "assets/start.63551053.css"
     ]
   },
   "src/admin/FontManager/FontManager.js": {
@@ -25,11 +13,11 @@
     "isEntry": true
   },
   "src/admin/start.css": {
-    "file": "assets/start.8535ab5d.css",
+    "file": "assets/start.63551053.css",
     "src": "src/admin/start.css"
   },
   "src/scss/admin/app.scss": {
-    "file": "assets/app.e5f1b38e.css",
+    "file": "assets/app.4a80cefd.css",
     "src": "src/scss/admin/app.scss",
     "isEntry": true
   }
