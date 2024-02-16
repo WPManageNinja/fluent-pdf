@@ -3,7 +3,6 @@ jQuery(document).ready(function ($) {
     const pdfDownloader = {
         
         initDownloadFonts() {
-            console.log('font install called')
             $('#ff_download_fonts').addClass('is-loading').attr('disabled', true);
             $('.ff_download_fonts_text').text('Downloading...');
             $('.ff_download_loading').html('Please do not close this window when downloading the fonts, After downloading page will auto reload.');

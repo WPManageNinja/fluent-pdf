@@ -120,7 +120,7 @@ class GlobalFontManager
         Activator::maybeCreateFolderStructure();
 
         $fontManager = new FontDownloader();
-        $downloadableFiles = $fontManager->getDownloadableFonts();
+        $downloadableFiles = $fontManager->getDownloadableFonts(3);
 
         $downloadedFiles = [];
         foreach ($downloadableFiles as $downloadableFile) {
