@@ -1,0 +1,24 @@
+{
+  "src/admin/start.js": {
+    "file": "start.js",
+    "src": "src/admin/start.js",
+    "isEntry": true,
+    "css": [
+      "assets/start.63551053.css"
+    ]
+  },
+  "src/admin/FontManager/FontManager.js": {
+    "file": "FontManager.js",
+    "src": "src/admin/FontManager/FontManager.js",
+    "isEntry": true
+  },
+  "src/admin/start.css": {
+    "file": "assets/start.63551053.css",
+    "src": "src/admin/start.css"
+  },
+  "src/scss/admin/app.scss": {
+    "file": "assets/app.4a80cefd.css",
+    "src": "src/scss/admin/app.scss",
+    "isEntry": true
+  }
+}
