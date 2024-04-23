@@ -48,6 +48,10 @@ class GlobalPdfConfig
         ]);
 
         $response = wp_remote_get($githubApi);
+        if(is_wp_error($response)){
+            return $result;
+        }
+        
         $releases = json_decode($response['body']);
         if (isset($releases->documentation_url)) {
             return $result;
