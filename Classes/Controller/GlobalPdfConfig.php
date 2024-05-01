@@ -34,25 +34,22 @@ class GlobalPdfConfig
 
     public static function checkForUpdate($slug)
     {
-        $githubApi = "https://api.github.com/repos/hasanuzzamanbe/{$slug}/releases";
+        $githubApi = "https://api.github.com/repos/WPManageNinja/{$slug}/releases";
         $result = array(
             'available' => 'no',
             'url' => '',
             'slug' => 'fluent-pdf'
         );
 
-        $response = wp_remote_get($githubApi, 
-        [
-            'headers' => array('Accept' => 'application/json',
-            'authorization' => 'bearer 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')
-        ]);
-
         $response = wp_remote_get($githubApi);
+
+
         if(is_wp_error($response)){
             return $result;
         }
         
         $releases = json_decode($response['body']);
+
         if (isset($releases->documentation_url)) {
             return $result;
         }
