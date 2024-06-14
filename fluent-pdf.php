@@ -6,7 +6,7 @@
  * Description: Download and Email entries as pdf with multiple template for all Fluent Products. 
  * Author: WPManageNinja LLC
  * Author URI:  https://wpmanageninja.com
- * Version: 1.0.0
+ * Version: 1.0.1
  * Text Domain: fluent-pdf
  * Domain Path: /assets/languages
  */
@@ -32,7 +32,7 @@
 defined('ABSPATH') or die;
 
 define('FLUENT_PDF', true);
-define('FLUENT_PDF_VERSION', '1.0.0');
+define('FLUENT_PDF_VERSION', '1.0.1');
 define('FLUENT_PDF_PATH', plugin_dir_path(__FILE__)); // For backward compatibility
 define('FLUENT_PDF_URL', plugin_dir_url(__FILE__));
 define('FLUENTPDF_FRAMEWORK_UPGRADE', '1.0.0'); //TO REMOVE
