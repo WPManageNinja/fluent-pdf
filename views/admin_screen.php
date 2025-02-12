@@ -1,6 +1,6 @@
 <?php defined('ABSPATH') or die; ?>
 
-<?php if(count($downloadableFiles)): ?>
+<?php if(count($downloadableFiles) == 0): ?>
 <style>
     .font_downloader_wrapper .ff_download_loading {
         margin-top: 20px;
@@ -45,10 +45,9 @@
         border-top-left-radius: 4px;
         border-bottom-left-radius: 4px;
     }
-
-
 </style>
-<div  class="font_downloader_wrapper text-center" style="max-width: 600px;margin: 10px auto;">
+
+<div class="font_downloader_wrapper text-center" style="max-width: 600px;margin: 10px auto;">
     <img class="mb-3" src="<?= FLUENT_PDF_URL . 'assets/images/pdf-img.png'; ?>" alt="">
     <h3 class="mb-2">Fonts are required for PDF Generation</h3>
     <p class="mb-4">This module requires to download fonts for PDF generation. Please click on the bellow button and it will download the required font files. This is one time job</p>
