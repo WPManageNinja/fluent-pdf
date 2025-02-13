@@ -82,7 +82,7 @@ export default class WPPluginVueTailwind {
     }
 
     $post(url, options = {}) {
-         url = window.fluent_pdf_admin.ajaxUrl;
+        url = window.fluent_pdf_admin.ajaxUrl;
         return ajax.post(url, options);
     }
 

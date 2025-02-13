@@ -2,7 +2,7 @@
     <div class="ff_field_manager" v-for="field in fields" :key="field.key">
         <el-form-item :required="field.required" :label="field.label">
             <template slot="default">
-                {{field.label}}
+                {{ field.label }}
                 <el-tooltip
                     v-if="field.tips"
                     class="item"
@@ -16,8 +16,9 @@
                 </el-tooltip>
             </template>
 
-            <template v-if="field.component == 'text'" >
-                <el-input :placeholder="field.placeholder" v-model="settings[field.key]" :readonly="field.readonly"></el-input>
+            <template v-if="field.component == 'text'">
+                <el-input :placeholder="field.placeholder" v-model="settings[field.key]"
+                          :readonly="field.readonly"></el-input>
             </template>
 
             <template v-else-if="field.component == 'number'">
@@ -30,7 +31,8 @@
                         v-for="(fieldLabel, fieldValue) in field.options"
                         :key="fieldValue"
                         :label="fieldValue"
-                    >{{fieldLabel}}</el-radio>
+                    >{{ fieldLabel }}
+                    </el-radio>
                 </el-radio-group>
             </template>
 
@@ -47,7 +49,7 @@
 
             <template v-else-if="field.component == 'dropdown-group'">
                 <el-select v-model="settings[field.key]" :placeholder="field.placeholder">
-                    <el-option-group 
+                    <el-option-group
                         v-for="(group,groupLabel) in field.options"
                         :key="groupLabel"
                         :label="groupLabel">
@@ -62,12 +64,12 @@
             </template>
 
             <template v-else-if="field.component == 'color_picker'">
-                <el-color-picker v-model="settings[field.key]" />
+                <el-color-picker v-model="settings[field.key]"/>
             </template>
 
             <template v-else-if="field.component == 'checkbox-single'">
                 <el-checkbox v-model="settings[field.key]">
-                    {{field.checkbox_label}}
+                    {{ field.checkbox_label }}
                 </el-checkbox>
             </template>
 
@@ -77,13 +79,14 @@
                         v-for="(fieldLabel, fieldValue) in field.options"
                         :key="fieldValue"
                         :label="fieldValue"
-                    >{{fieldLabel}}</el-checkbox>
+                    >{{ fieldLabel }}
+                    </el-checkbox>
                 </el-checkbox-group>
             </template>
 
             <template v-else>
                 <p>Invalid Vue Element</p>
-                <pre>{{field}}</pre>
+                <pre>{{ field }}</pre>
             </template>
 
             <p class="mt-2 text-note" v-if="field.inline_tip" v-html="field.inline_tip"></p>
@@ -93,28 +96,28 @@
 </template>
 
 <script type="text/babel">
-    import ErrorView from './Common/errorView.vue';
+import ErrorView from './Common/errorView.vue';
 
-    export default {
-        name: 'FieldManager',
-        props: ['fields', 'errors', 'settings'],
-        components: {
-            ErrorView
-        },
-        computed: {
-            htmlBodyeditorShortcodes() {
-                const freshCopy = _ff.cloneDeep(this.editorShortcodes);
-                if (freshCopy && freshCopy.length) {
-                    freshCopy[0].shortcodes = {
-                        ...freshCopy[0].shortcodes,
-                        '{all_data}': 'All Data',
-                        '{all_data_without_hidden_fields}' : 'All Data Without Hidden Fields'
-                    };
-                }
-                return freshCopy;
+export default {
+    name: 'FieldManager',
+    props: ['fields', 'errors', 'settings'],
+    components: {
+        ErrorView
+    },
+    computed: {
+        htmlBodyEditorShortcodes() {
+            const freshCopy = _ff.cloneDeep(this.editorShortcodes);
+            if (freshCopy && freshCopy.length) {
+                freshCopy[0].shortcodes = {
+                    ...freshCopy[0].shortcodes,
+                    '{all_data}': 'All Data',
+                    '{all_data_without_hidden_fields}': 'All Data Without Hidden Fields'
+                };
             }
+            return freshCopy;
         }
     }
+}
 </script>
 
 <style>

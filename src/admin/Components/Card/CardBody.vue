@@ -1,11 +1,11 @@
 <template>
     <div class="ff_card_body">
-        <slot />
+        <slot/>
     </div>
 </template>
 
 <script>
-    export default {
-        name: 'CardBody'
-    }
+export default {
+    name: 'CardBody'
+}
 </script>

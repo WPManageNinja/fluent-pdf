@@ -23,7 +23,7 @@ export default class Errors {
     }
 
     has(field) {
-        return !! this.errors[field]
+        return !!this.errors[field]
     }
 
     record(errors) {

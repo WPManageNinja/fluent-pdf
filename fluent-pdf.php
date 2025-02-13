@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Fluent PDF Generator
  * Plugin URI:  https://wpmanageninja.com/downloads/fluentform-pro-add-on/
- * Description: Download and Email entries as pdf with multiple template for all Fluent Products. 
+ * Description: Download and Email entries as pdf with multiple template for all Fluent Products.
  * Author: WPManageNinja LLC
  * Author URI:  https://wpmanageninja.com
  * Version: 1.0.1
@@ -41,6 +41,7 @@ define('FLUENT_PDF_PRODUCTION', 'yes');
 
 require_once FLUENT_PDF_PATH . 'vendor/autoload.php';
 require_once FLUENT_PDF_PATH . 'API/Pdf.php';
+
 class FluentPdf
 {
     public function boot()
@@ -50,12 +51,12 @@ class FluentPdf
         };
 
         (new FluentPdf\Classes\PdfBuilder())->register();
-        
+
         do_action('fluent_pdf_loaded');
     }
 }
 
-add_action('plugins_loaded', function () {
+add_action('plugins_loaded', function() {
     load_plugin_textdomain(
         'fluent-pdf',
         false,
@@ -65,16 +66,14 @@ add_action('plugins_loaded', function () {
     (new FluentPdf())->boot();
 });
 
-add_action('init', function () {
+add_action('init', function() {
     (new FluentPdf\Classes\Controller\GlobalFontManager())->registerAjax();
 });
 
-register_activation_hook(__FILE__, function () {
-    // require_once FLUENT_PDF_PATH . '/Classes/Controller/Activator.php';
+register_activation_hook(__FILE__, function() {
     FluentPdf\Classes\Controller\Activator::activate();
 });
 
-register_deactivation_hook(__FILE__, function () {
-    // require_once FLUENT_PDF_PATH . '/Classes/Controller/Activator.php';
+register_deactivation_hook(__FILE__, function() {
     FluentPdf\Classes\Controller\Activator::deactivate();
 });

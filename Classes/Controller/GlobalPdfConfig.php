@@ -37,17 +37,17 @@ class GlobalPdfConfig
         $githubApi = "https://api.github.com/repos/WPManageNinja/{$slug}/releases";
         $result = array(
             'available' => 'no',
-            'url' => '',
-            'slug' => 'fluent-pdf'
+            'url'       => '',
+            'slug'      => 'fluent-pdf'
         );
 
         $response = wp_remote_get($githubApi);
 
 
-        if(is_wp_error($response)){
+        if (is_wp_error($response)) {
             return $result;
         }
-        
+
         $releases = json_decode($response['body']);
 
         if (isset($releases->documentation_url)) {
@@ -61,7 +61,7 @@ class GlobalPdfConfig
         if (!function_exists('get_plugins')) {
             require_once ABSPATH . 'wp-admin/includes/plugin.php';
         }
-    
+
         $plugins = get_plugins();
         $currentVersion = '';
 
@@ -73,7 +73,7 @@ class GlobalPdfConfig
             }
         }
 
-        if (version_compare( $latestVersion, $currentVersion, '>')) {
+        if (version_compare($latestVersion, $currentVersion, '>')) {
             $result['available'] = 'yes';
             $result['url'] = $zipUrl;
         }

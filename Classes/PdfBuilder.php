@@ -22,15 +22,21 @@ class PdfBuilder
     }
 
     /**
-     * @param $content, array, ['header' => '', 'body' => '', 'footer' => '']
-     * @param string $filename, 'document.pdf'
-     * @param null $outputType, 'S', 'I', 'D', 'F'
+     * @param $content , array, ['header' => '', 'body' => '', 'footer' => '']
+     * @param string $filename , 'document.pdf'
+     * @param null $outputType , 'S', 'I', 'D', 'F'
      * @param array $config General settings config
-     * @param array $extraConfig, Extra config allows password, direction, htmlHeader, watermark_image, watermark_text
-     * @return string   
+     * @param array $extraConfig , Extra config allows password, direction, htmlHeader, watermark_image, watermark_text
+     *
+     * @return string
      */
-    public function generatePdf($content, $filename = 'document.pdf', $outputType = null, $config = [], $extraConfig = [])
-    {
+    public function generatePdf(
+        $content,
+        $filename = 'document.pdf',
+        $outputType = null,
+        $config = [],
+        $extraConfig = []
+    ) {
         $pdfInstance = (new Pdf($config));
         $pdfInstance->setOtherConfig($extraConfig);
         $pdfInstance->setHeader(Arr::get($content, 'header', ''));

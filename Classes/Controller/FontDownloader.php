@@ -9,16 +9,16 @@ class FontDownloader
 
     public function getCoreFonts()
     {
-        $json = file_get_contents(FLUENT_PDF_PATH.'/core-fonts.json');
+        $json = file_get_contents(FLUENT_PDF_PATH . '/core-fonts.json');
         return json_decode($json, true);
     }
 
     public function getDownloadableFonts($limit = 0)
     {
         $fontDir = $this->getFontDir();
-        if(!function_exists('\list_files')) {
-            $admin_path = ABSPATH .'/wp-admin/';
-            include_once $admin_path.'includes/file.php';
+        if (!function_exists('\list_files')) {
+            $admin_path = ABSPATH . '/wp-admin/';
+            include_once $admin_path . 'includes/file.php';
         }
         $downloadedFiles = \list_files($fontDir, 1);
 
@@ -29,10 +29,10 @@ class FontDownloader
         $coreFonts = $this->getCoreFonts();
         $downloadableFonts = [];
         foreach ($coreFonts as $coreFont) {
-            if($limit && count($downloadableFonts) == $limit) {
+            if ($limit && count($downloadableFonts) == $limit) {
                 return $downloadableFonts;
             }
-            if(!in_array($coreFont['name'], $fileNames)) {
+            if (!in_array($coreFont['name'], $fileNames)) {
                 $downloadableFonts[] = $coreFont;
             }
         }
@@ -52,13 +52,13 @@ class FontDownloader
         );
 
         /* Check for errors and log them to file */
-        if ( is_wp_error( $res ) ) {
+        if (is_wp_error($res)) {
             return $res;
         }
 
-        $res_code = wp_remote_retrieve_response_code( $res );
-        if ( $res_code !== 200 ) {
-           return new \WP_Error('failed', 'Core Font API Response Failed');
+        $res_code = wp_remote_retrieve_response_code($res);
+        if ($res_code !== 200) {
+            return new \WP_Error('failed', __('Core Font API Response Failed', 'fluent-pdf'));
         }
         return true;
     }
@@ -66,6 +66,6 @@ class FontDownloader
     private function getFontDir()
     {
         $dirStructure = AvailableOptions::getDirStructure();
-        return $dirStructure['fontDir'].'/';
+        return $dirStructure['fontDir'] . '/';
     }
 }

@@ -1,6 +1,8 @@
 <?php
+
 namespace FluentPdf\Classes\Controller;
 
+use FluentFormPdf\Classes\Controller\AvailableOptions;
 use FluentPdf\Classes\Vite;
 use FluentPdf\Classes\PdfBuilder;
 
@@ -16,16 +18,13 @@ class GlobalFontManager
     public function ajaxRoutes()
     {
         $maps = [
-            'get_global_settings' => 'getGlobalSettingsAjax',
+            'get_global_settings'  => 'getGlobalSettingsAjax',
             'save_global_settings' => 'saveGlobalSettings',
-            'download_pdf' => 'getPdf',
-            'downloadFonts' => 'downloadFonts',
-            
+            'download_pdf'         => 'getPdf',
+            'downloadFonts'        => 'downloadFonts',
         ];
 
         $route = sanitize_text_field($_REQUEST['route']);
-
-        // Acl::verify('fluent_forms_manager');
 
         if (isset($maps[$route])) {
             $this->{$maps[$route]}();
@@ -36,7 +35,7 @@ class GlobalFontManager
     {
         wp_send_json_success([
             'settings' => $this->globalSettings(),
-            'fields' => $this->getGlobalFields()
+            'fields'   => $this->getGlobalFields()
         ]);
     }
 
@@ -45,13 +44,13 @@ class GlobalFontManager
         $settings = wp_unslash($_REQUEST['settings']);
 
         update_option($this->optionKey, $settings);
-        
+
         wp_send_json_success([
             'message' => __('Settings successfully updated', 'fluent-pdf')
         ], 200);
     }
 
-        /*
+    /*
     * @return [ key name]
     * global pdf setting fields
     */
@@ -59,61 +58,60 @@ class GlobalFontManager
     {
         return [
             [
-                'key' => 'paper_size',
-                'label' => 'Paper size',
+                'key'       => 'paper_size',
+                'label'     => __('Paper size', 'fluent-pdf'),
                 'component' => 'dropdown',
-                'tips' => 'All available templates are shown here, select a default template',
-                'options' => AvailableOptions::getPaperSizes()
+                'tips'      => __('All available templates are shown here, select a default template', 'fluent-pdf'),
+                'options'   => AvailableOptions::getPaperSizes()
             ],
             [
-                'key' => 'orientation',
-                'label' => 'Orientation',
+                'key'       => 'orientation',
+                'label'     => __('Orientation', 'fluent-pdf'),
                 'component' => 'dropdown',
-                'options' => AvailableOptions::getOrientations()
+                'options'   => AvailableOptions::getOrientations()
             ],
             [
-                'key' => 'font_family',
-                'label' => 'Font Family',
-                'component' => 'dropdown-group',
-                'placeholder' => 'Select Font',
-                'options' => AvailableOptions::getInstalledFonts()
+                'key'         => 'font_family',
+                'label'       => __('Font Family', 'fluent-pdf'),
+                'component'   => 'dropdown-group',
+                'placeholder' => __('Select Font', 'fluent-pdf'),
+                'options'     => AvailableOptions::getInstalledFonts()
             ],
             [
-                'key' => 'font_size',
-                'label' => 'Font size',
+                'key'       => 'font_size',
+                'label'     => __('Font size', 'fluent-pdf'),
                 'component' => 'number'
             ],
             [
-                'key' => 'font_color',
-                'label' => 'Font color',
+                'key'       => 'font_color',
+                'label'     => __('Font color', 'fluent-pdf'),
                 'component' => 'color_picker'
             ],
             [
-                'key' => 'heading_color',
-                'label' => 'Heading color',
-                'tips' => 'The Color Form Headings',
+                'key'       => 'heading_color',
+                'label'     => __('Heading color', 'fluent-pdf'),
+                'tips'      => __('Select Heading Color', 'fluent-pdf'),
                 'component' => 'color_picker'
             ],
             [
-                'key' => 'accent_color',
-                'label' => 'Accent color',
-                'tips' => 'The accent color is used for the borders, breaks etc.',
+                'key'       => 'accent_color',
+                'label'     => __('Accent color', 'fluent-pdf'),
+                'tips'      => __('The accent color is used for the borders, breaks etc.', 'fluent-pdf'),
                 'component' => 'color_picker'
             ],
             [
-                'key' => 'language_direction',
-                'label' => 'Language Direction',
-                'tips' => 'Script like Arabic and Hebrew are written right to left. For Arabic/Hebrew please select RTL',
+                'key'       => 'language_direction',
+                'label'     => __('Language Direction', 'fluent-pdf'),
+                'tips'      => __('Script like Arabic and Hebrew are written right to left. For Arabic/Hebrew please select RTL',
+                    'fluent-pdf'),
                 'component' => 'radio_choice',
-                'options' => [
-                    'ltr' => 'LTR',
-                    'rtl' => 'RTL'
+                'options'   => [
+                    'ltr' => __('LTR', 'fluent-pdf'),
+                    'rtl' => __('RTL', 'fluent-pdf')
                 ]
             ]
         ];
     }
-
-
 
     public function downloadFonts()
     {
@@ -129,7 +127,7 @@ class GlobalFontManager
             $downloadedFiles[] = $fontName;
             if (is_wp_error($res)) {
                 wp_send_json_error([
-                    'message' => 'Font Download failed. Please reload and try again'
+                    'message' => __('Font Download failed. Please reload and try again', 'fluent-pdf')
                 ], 423);
             }
         }
@@ -140,15 +138,16 @@ class GlobalFontManager
     }
 
     public function renderGlobalPage()
-    {        
-        Vite::enqueueScript('fluent_pdf_admin', 'admin/FontManager/FontManager.js', array('jquery'), FLUENT_PDF_VERSION, true);
+    {
+        Vite::enqueueScript('fluent_pdf_admin', 'admin/FontManager/FontManager.js', array('jquery'), FLUENT_PDF_VERSION,
+            true);
 
         $fontManager = new FontDownloader();
         $downloadableFiles = $fontManager->getDownloadableFonts();
 
         wp_localize_script('fluent_pdf_admin', 'fluent_pdf_admin', [
             'ajaxUrl' => admin_url('admin-ajax.php'),
-            'nonce' => wp_create_nonce('fluent_pdf_admin_nonce'),
+            'nonce'   => wp_create_nonce('fluent_pdf_admin_nonce'),
         ]);
 
         $statuses = [];
@@ -178,32 +177,42 @@ class GlobalFontManager
         $dom = extension_loaded('dom') || class_exists('DOMDocument');
         $libXml = extension_loaded('libxml');
         $extensions = [
-            'mbstring' => [
+            'mbstring'          => [
                 'status' => $mbString,
-                'label' => ($mbString) ? 'MBString is enabled' : 'The PHP Extension MB String could not be detected. Contact your web hosting provider to fix.'
+                'label'  => ($mbString) ? __('MBString is enabled',
+                    'fluent-pdf') : __('The PHP Extension MB String could not be detected. Contact your web hosting provider to fix.',
+                    'fluent-pdf')
             ],
             'mb_regex_encoding' => [
                 'status' => $mbRegex,
-                'label' => ($mbRegex) ? 'MBString Regex is enabled' : 'The PHP Extension MB String does not have MB Regex enabled. Contact your web hosting provider to fix.'
+                'label'  => ($mbRegex) ? __('MBString Regex is enabled',
+                    'fluent-pdf') : __('The PHP Extension MB String does not have MB Regex enabled. Contact your web hosting provider to fix.',
+                    'fluent-pdf')
             ],
-            'gd' => [
+            'gd'                => [
                 'status' => $gd,
-                'label' => ($gd) ? 'GD Library is enabled' : 'The PHP Extension GD Image Library could not be detected. Contact your web hosting provider to fix.'
+                'label'  => ($gd) ? __('GD Library is enabled',
+                    'fluent-pdf') : __('The PHP Extension GD Image Library could not be detected. Contact your web hosting provider to fix.',
+                    'fluent-pdf')
             ],
-            'dom' => [
+            'dom'               => [
                 'status' => $dom,
-                'label' => ($dom) ? 'PHP Dom is enabled' : 'The PHP DOM Extension was not found. Contact your web hosting provider to fix.'
+                'label'  => ($dom) ? __('PHP Dom is enabled',
+                    'fluent-pdf') : __('The PHP DOM Extension was not found. Contact your web hosting provider to fix.',
+                    'fluent-pdf')
             ],
-            'libXml' => [
+            'libXml'            => [
                 'status' => $libXml,
-                'label' => ($libXml) ? 'LibXml is OK' : 'The PHP Extension libxml could not be detected. Contact your web hosting provider to fix'
+                'label'  => ($libXml) ? __('LibXml is OK',
+                    'fluent-pdf') : __('The PHP Extension libxml could not be detected. Contact your web hosting provider to fix',
+                    'fluent-pdf')
             ]
         ];
 
         $overAllStatus = $mbString && $mbRegex && $gd && $dom && $libXml;
 
         return [
-            'status' => $overAllStatus,
+            'status'     => $overAllStatus,
             'extensions' => $extensions
         ];
     }

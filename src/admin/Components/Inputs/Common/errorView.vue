@@ -5,8 +5,8 @@
 </template>
 
 <script>
-    export default {
-        name: 'errorView',
-        props: ['field', 'errors']
-    }
+export default {
+    name: 'errorView',
+    props: ['field', 'errors']
+}
 </script>
