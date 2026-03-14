@@ -41,6 +41,8 @@ define('FLUENT_PDF_PRODUCTION', 'yes');
 
 require_once FLUENT_PDF_PATH . 'vendor/autoload.php';
 require_once FLUENT_PDF_PATH . 'API/Pdf.php';
+require_once FLUENT_PDF_PATH . 'PluginManager/Updater.php';
+
 class FluentPdf
 {
     public function boot()
@@ -63,6 +65,39 @@ add_action('plugins_loaded', function () {
     );
 
     (new FluentPdf())->boot();
+
+    /**
+     * Plugin Updater
+     */
+    $apiUrl = 'https://api.fluentcart.com/wp-admin/admin-ajax.php?action=fluent_pdf_update&time=' . time();
+    new \FluentPdf\PluginManager\Updater($apiUrl, __FILE__, array(
+        'version'   => FLUENT_PDF_VERSION,
+        'license'   => '12345',
+        'item_name' => 'fluent-pdf',
+        'item_id'   => 'fluent-pdf',
+        'author'    => 'wpmanageninja'
+    ),
+        array(
+            'license_status' => 'valid',
+            'admin_page_url' => admin_url('admin.php?page=fluent-pdf'),
+            'purchase_url'   => 'https://wpmanageninja.com',
+            'plugin_title'   => 'Fluent PDF Generator'
+        )
+    );
+
+    add_filter('plugin_row_meta', function ($links, $pluginFile) {
+        if (plugin_basename(__FILE__) !== $pluginFile) {
+            return $links;
+        }
+
+        $checkUpdateUrl = esc_url(admin_url('plugins.php?fluent-pdf-check-update=' . time()));
+
+        $row_meta = array(
+            'check_update' => '<a style="color: #583fad;font-weight: 600;" href="' . $checkUpdateUrl . '" aria-label="' . esc_attr__('Check Update', 'fluent-pdf') . '">' . esc_html__('Check Update', 'fluent-pdf') . '</a>',
+        );
+
+        return array_merge($links, $row_meta);
+    }, 10, 2);
 });
 
 add_action('init', function () {
