@@ -205,6 +205,10 @@ class FluentFormsIntegration
         ];
 
         $option = get_option($this->optionKey);
+        // Fallback to old option key in case migration hasn't run yet
+        if (!$option || !is_array($option)) {
+            $option = get_option('_fluentform_pdf_settings');
+        }
         if (!$option || !is_array($option)) {
             return $defaults;
         }
