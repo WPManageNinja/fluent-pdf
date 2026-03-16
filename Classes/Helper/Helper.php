@@ -1,4 +1,5 @@
 <?php
+
 namespace FluentPdf\Classes\Helper;
 
 use FluentPdf\Support\Arr;

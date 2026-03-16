@@ -2,9 +2,9 @@
 Contributors: techjewel,adreastrian,heera,wpmanageninja,hasanuzzamanshamim
 Tags: PDF, Form To PDF, attachment, fluent forms
 Requires at least: 5.0
-Tested up to: 6.2.2
-Requires PHP: 5.6
-Stable tag: 1.0.1
+Tested up to: 6.7
+Requires PHP: 7.1
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,7 +42,15 @@ You can also send these PDF files via emails to your users and make them passwor
 
 == Changelog ==
 
-== 1.0.0 - August 28, 2023 =
+= 1.1.0 - March 16, 2026 =
+* Added Fluent Forms integration as a built-in module
+* Added automatic migration of settings from old fluentforms-pdf plugin
+* Added plugin coexistence support — both old and new plugins can be active during transition
+* Added graceful error handling for missing fonts (friendly error page instead of fatal PHP crash)
+* Updated compatibility with WordPress 6.7
+* Updated minimum PHP requirement to 7.1
+
+= 1.0.0 - August 28, 2023 =
 - Adds Dynamic module for third party plugins
 
 = 1.1.7 - June 22, 2023 =

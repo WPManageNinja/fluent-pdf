@@ -1,4 +1,4 @@
-const request = function(method, route, data = {}) {
+const request = function (method, route, data = {}) {
     const url = window.fluent_pdf_admin.ajaxUrl;
     const headers = {'X-WP-Nonce': window.fluent_pdf_admin.nonce};
 

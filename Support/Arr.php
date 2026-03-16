@@ -2,6 +2,8 @@
 
 namespace FluentPdf\Support;
 
+use Closure;
+
 class Arr
 {
     /**
@@ -11,8 +13,9 @@ class Arr
     /**
      * Check if an item or items exist in an array using "dot" notation.
      *
-     * @param  \ArrayAccess|array $array
-     * @param  string|array       $keys
+     * @param \ArrayAccess|array $array
+     * @param string|array $keys
+     *
      * @return bool
      */
     public static function has($array, $keys)
@@ -21,7 +24,7 @@ class Arr
             return false;
         }
 
-        $keys = (array) $keys;
+        $keys = (array)$keys;
 
         if (!$array) {
             return false;
@@ -53,9 +56,10 @@ class Arr
     /**
      * Get an item from an array using "dot" notation.
      *
-     * @param  \ArrayAccess|array $array
-     * @param  string             $key
-     * @param  mixed              $default
+     * @param \ArrayAccess|array $array
+     * @param string $key
+     * @param mixed $default
+     *
      * @return mixed
      */
     public static function get($array, $key, $default = null)
@@ -88,9 +92,10 @@ class Arr
      *
      * If no key is given to the method, the entire array will be replaced.
      *
-     * @param  array  $array
-     * @param  string $key
-     * @param  mixed  $value
+     * @param array $array
+     * @param string $key
+     * @param mixed $value
+     *
      * @return array
      */
     public static function set(&$array, $key, $value)
@@ -122,20 +127,22 @@ class Arr
     /**
      * Get a subset of the items from the given array.
      *
-     * @param  array        $array
-     * @param  array|string $keys
+     * @param array $array
+     * @param array|string $keys
+     *
      * @return array
      */
     public static function only($array, $keys)
     {
-        return array_intersect_key($array, array_flip((array) $keys));
+        return array_intersect_key($array, array_flip((array)$keys));
     }
 
     /**
      * Get all of the given array except for a specified array of items.
      *
-     * @param  array        $array
-     * @param  array|string $keys
+     * @param array $array
+     * @param array|string $keys
+     *
      * @return array
      */
     public static function except($array, $keys)
@@ -148,14 +155,14 @@ class Arr
     /**
      * Remove one or many array items from a given array using "dot" notation.
      *
-     * @param array        $array
+     * @param array $array
      * @param array|string $keys
      */
     public static function forget(&$array, $keys)
     {
         $original = &$array;
 
-        $keys = (array) $keys;
+        $keys = (array)$keys;
 
         if (count($keys) === 0) {
             return;
@@ -191,7 +198,8 @@ class Arr
     /**
      * Determine whether the given value is array accessible.
      *
-     * @param  mixed $value
+     * @param mixed $value
+     *
      * @return bool
      */
     public static function accessible($value)
@@ -202,8 +210,9 @@ class Arr
     /**
      * Determine if the given key exists in the provided array.
      *
-     * @param  \ArrayAccess|array $array
-     * @param  string|int         $key
+     * @param \ArrayAccess|array $array
+     * @param string|int $key
+     *
      * @return bool
      */
     public static function exists($array, $key)
@@ -218,7 +227,8 @@ class Arr
     /**
      * Return the default value of the given value.
      *
-     * @param  mixed $value
+     * @param mixed $value
+     *
      * @return mixed
      */
     public static function value($value)
@@ -229,7 +239,7 @@ class Arr
     /**
      * Flatten a multi-dimensional associative array with dots.
      *
-     * @param array  $array
+     * @param array $array
      * @param string $prepend
      *
      * @return array

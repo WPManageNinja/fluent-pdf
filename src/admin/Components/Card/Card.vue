@@ -3,23 +3,23 @@
         <div v-if="img" class="ff_card_img" :class="imgClass">
             <img :src="img" alt="">
         </div>
-        <slot />
+        <slot/>
     </div>
 </template>
 
 <script>
-    export default {
-        name: 'Card',
-        props: {
-            border: {
-                type: Boolean
-            },
-            img: {
-                type: String
-            },
-            imgClass: {
-                type: String
-            }
+export default {
+    name: 'Card',
+    props: {
+        border: {
+            type: Boolean
+        },
+        img: {
+            type: String
+        },
+        imgClass: {
+            type: String
         }
     }
+}
 </script>

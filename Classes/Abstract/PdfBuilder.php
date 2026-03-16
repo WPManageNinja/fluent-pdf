@@ -9,7 +9,9 @@ abstract class PdfBuilder
     protected $pdfBuilder;
 
     abstract public function header(): string;
+
     abstract public function body(): string;
+
     abstract public function footer(): string;
 
     public function __construct()
@@ -27,10 +29,10 @@ abstract class PdfBuilder
     }
 
 
-    public function  generatePdf()
+    public function generatePdf()
     {
         $content = $this->getPdfContent();
         return $this->pdfBuilder->generatePdf($content);
-       // to-do we may write global method to generate pdf form hooks
+        // to-do we may write global method to generate pdf form hooks
     }
 }

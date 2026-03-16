@@ -9,7 +9,7 @@ class AdminMenuHandler
 {
     public function register()
     {
-        add_action('admin_menu',  function () {
+        add_action('admin_menu', function() {
             $this->addMenu();
         });
     }
@@ -54,15 +54,16 @@ class AdminMenuHandler
 
         $fluentPdfVars = apply_filters('fluent-pdf/admin_app_vars', array(
             'assets_url' => FLUENT_PDF_URL . 'assets/',
-            'ajaxUrl' => admin_url('admin-ajax.php'),
-            'nonce' => wp_create_nonce('fluent_pdf_nonce'),
+            'ajaxUrl'    => admin_url('admin-ajax.php'),
+            'nonce'      => wp_create_nonce('fluent_pdf_nonce'),
         ));
 
         wp_localize_script('fluent-pdf-script-boot', 'fluent_pdf_admin', $fluentPdfVars);
 
-        echo '<div class="fluent-pdf-admin-page" id="fluent-pdf_app">
-                <router-view></router-view>
-            </div>';
+        echo 
+        '<div class="fluent-pdf-admin-page" id="fluent-pdf_app">
+            <router-view></router-view>
+        </div>';
     }
 
     public function render()

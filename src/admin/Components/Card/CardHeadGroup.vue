@@ -5,7 +5,7 @@
 </template>
 
 <script>
-    export default {
-        name: 'CardHeadGroup'
-    }
+export default {
+    name: 'CardHeadGroup'
+}
 </script>

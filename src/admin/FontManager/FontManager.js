@@ -1,7 +1,7 @@
 jQuery(document).ready(function ($) {
     let progress = 0;
     const pdfDownloader = {
-        
+
         initDownloadFonts() {
             $('#ff_download_fonts').addClass('is-loading').attr('disabled', true);
             $('.ff_download_fonts_text').text('Downloading...');
@@ -17,7 +17,7 @@ jQuery(document).ready(function ($) {
 
         ajaxLoadFonts() {
 
-            if (progress < 95){
+            if (progress < 95) {
                 progress += 5;
             }
 
@@ -30,7 +30,7 @@ jQuery(document).ready(function ($) {
                 route: 'downloadFonts'
             })
                 .then(response => {
-                    if(response.data.downloaded_files && response.data.downloaded_files.length) {
+                    if (response.data.downloaded_files && response.data.downloaded_files.length) {
                         $('.ff_download_logs').prepend(response.data.downloaded_files.join('<br />')).show();
                         $('.ff_downlaod_logs').removeClass('hidden');
                         this.ajaxLoadFonts();

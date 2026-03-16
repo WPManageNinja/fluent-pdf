@@ -25,17 +25,17 @@ class Vite
     }
 
 
-
     /***
      * @param $handle
      * @param $src string file path relative to resource/src directory before build
      * @param array $dependency
      * @param null $version
      * @param bool $inFooter
+     *
      * @return $this
-     * 
+     *
      * @throws \Exception If dev mode is on and file not found in manifest
-     * 
+     *
      */
     private function enqueueScript($handle, $src, $dependency = [], $version = null, $inFooter = false)
     {
@@ -49,7 +49,7 @@ class Vite
         (static::$instance)->moduleScripts[] = $handle;
 
         if (!(static::$instance)->isScriptFilterAdded) {
-            add_filter('script_loader_tag', function ($tag, $handle, $src) {
+            add_filter('script_loader_tag', function($tag, $handle, $src) {
                 return (static::$instance)->addModuleToScript($tag, $handle, $src);
             }, 10, 3);
             (static::$instance)->isScriptFilterAdded = true;
