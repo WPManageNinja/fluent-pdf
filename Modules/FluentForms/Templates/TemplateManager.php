@@ -102,7 +102,21 @@ abstract class TemplateManager
             require_once FLUENT_PDF_PATH . 'vendor/autoload.php';
         }
 
-        return new \Mpdf\Mpdf($mpdfConfig);
+        try {
+            return new \Mpdf\Mpdf($mpdfConfig);
+        } catch (\Mpdf\MpdfException $e) {
+            $settingsUrl = admin_url('admin.php?page=fluent_forms_add_ons&sub_page=fluentform_pdf');
+            wp_die(
+                '<h2>' . esc_html__('Fluent PDF - Font Error', 'fluent-pdf') . '</h2>'
+                . '<p>' . esc_html($e->getMessage()) . '</p>'
+                . '<p>' . esc_html__('Please download the required fonts from the ', 'fluent-pdf')
+                . '<a href="' . esc_url($settingsUrl) . '">'
+                . esc_html__('Fluent PDF Settings', 'fluent-pdf')
+                . '</a>.</p>',
+                esc_html__('Fluent PDF Error', 'fluent-pdf'),
+                ['response' => 500, 'back_link' => true]
+            );
+        }
     }
 
     public function pdfBuilder($fileName, $feed, $body = '', $footer = '', $outPut = 'I')
