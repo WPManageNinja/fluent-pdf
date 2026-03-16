@@ -2,7 +2,7 @@
 
 namespace FluentPdf\Classes\Controller;
 
-use FluentFormPdf\Classes\Controller\AvailableOptions;
+use FluentPdf\Classes\Controller\AvailableOptions;
 use FluentPdf\Classes\Vite;
 use FluentPdf\Classes\PdfBuilder;
 

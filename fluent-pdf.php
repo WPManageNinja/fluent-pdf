@@ -35,23 +35,25 @@ define('FLUENT_PDF', true);
 define('FLUENT_PDF_VERSION', '2.0.0');
 define('FLUENT_PDF_PATH', plugin_dir_path(__FILE__));
 define('FLUENT_PDF_URL', plugin_dir_url(__FILE__));
-define('FLUENTPDF_FRAMEWORK_UPGRADE', '2.0.0');
-
 define('FLUENT_PDF_PRODUCTION', 'yes');
 
-// Fluent Forms compatibility constants — enables FF core's PDF UI
+// Fluent Forms compatibility constants — enables FF core's PDF UI.
+// VERSION defined early so FF core detects PDF support (hasPDF flag).
+// PATH/URL deferred to plugins_loaded so the old fluentforms-pdf plugin
+// can define them first with its own paths (load order is not guaranteed).
 if (!defined('FLUENTFORM_PDF_VERSION')) {
     define('FLUENTFORM_PDF_VERSION', FLUENT_PDF_VERSION);
 }
-if (!defined('FLUENTFORM_PDF_PATH')) {
-    define('FLUENTFORM_PDF_PATH', FLUENT_PDF_PATH);
-}
-if (!defined('FLUENTFORM_PDF_URL')) {
-    define('FLUENTFORM_PDF_URL', FLUENT_PDF_URL);
-}
-if (!defined('FLUENTFORM_FRAMEWORK_UPGRADE')) {
-    define('FLUENTFORM_FRAMEWORK_UPGRADE', '2.0.0');
-}
+add_action('plugins_loaded', function() {
+    // By now all plugin files are loaded — safe to set path/url
+    // only if old plugin didn't already define them.
+    if (!defined('FLUENTFORM_PDF_PATH')) {
+        define('FLUENTFORM_PDF_PATH', FLUENT_PDF_PATH);
+    }
+    if (!defined('FLUENTFORM_PDF_URL')) {
+        define('FLUENTFORM_PDF_URL', FLUENT_PDF_URL);
+    }
+}, 1);
 
 require_once FLUENT_PDF_PATH . 'vendor/autoload.php';
 require_once FLUENT_PDF_PATH . 'API/Pdf.php';

@@ -18,7 +18,7 @@ class PdfBuilder
 
     public function getConfig()
     {
-        return (new Pdf())->getGlobalConfig();
+        return Pdf::getGlobalConfig();
     }
 
     /**

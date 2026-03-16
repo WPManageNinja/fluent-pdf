@@ -59,7 +59,10 @@ class FluentFormsIntegration
         add_action('fluentform/addons_page_render_fluentform_pdf_settings', [$this, 'renderGlobalPage']);
 
         add_action('admin_notices', function () {
-            if (!get_option($this->optionKey) && Acl::hasAnyFormPermission()) {
+            $hasSettings = get_option($this->optionKey) || get_option('_fluentform_pdf_settings');
+            $dirs = AvailableOptions::getDirStructure();
+            $hasFonts = is_dir($dirs['fontDir']) && glob($dirs['fontDir'] . '/*.ttf');
+            if (!$hasSettings && !$hasFonts && Acl::hasAnyFormPermission()) {
                 // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- fluentform_sanitize_html() escapes output
                 echo fluentform_sanitize_html(
                     '<div class="notice notice-warning"><p>'

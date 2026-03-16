@@ -64,7 +64,10 @@ abstract class TemplateManager
     public function getGenerator($mpdfConfig)
     {
         $defaults = [
-            'fontDir'                => [$this->fontDir],
+            'fontDir'                => [
+                $this->fontDir,
+                FLUENT_PDF_PATH . 'vendor/mpdf/mpdf/ttfonts',
+            ],
             'tempDir'                => $this->tempDir,
             'curlCaCertificate'      => ABSPATH . WPINC . '/certificates/ca-bundle.crt',
             'curlFollowLocation'     => true,
