@@ -4,7 +4,7 @@
     "src": "src/admin/start.js",
     "isEntry": true,
     "css": [
-      "assets/start.63551053.css"
+      "assets/start.e7999d04.css"
     ]
   },
   "src/admin/FontManager/FontManager.js": {
@@ -13,11 +13,11 @@
     "isEntry": true
   },
   "src/admin/start.css": {
-    "file": "assets/start.63551053.css",
+    "file": "assets/start.e7999d04.css",
     "src": "src/admin/start.css"
   },
   "src/scss/admin/app.scss": {
-    "file": "assets/app.4a80cefd.css",
+    "file": "assets/app.0a0b918f.css",
     "src": "src/scss/admin/app.scss",
     "isEntry": true
   }

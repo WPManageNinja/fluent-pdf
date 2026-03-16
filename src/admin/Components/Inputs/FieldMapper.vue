@@ -133,10 +133,11 @@ export default {
 
 .ff_pdf_wrap {
     width: 600px;
-    width: 600px;
     margin: 10px auto;
     border: 1px solid #ccc;
     padding: 23px;
     border-radius: 8px;
+    background: #fff;
 }
+
 </style>
