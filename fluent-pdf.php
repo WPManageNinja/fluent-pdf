@@ -6,7 +6,7 @@
  * Description: Download and Email entries as pdf with multiple template for all Fluent Products.
  * Author: WPManageNinja LLC
  * Author URI:  https://wpmanageninja.com
- * Version: 1.0.1
+ * Version: 2.0.0
  * Text Domain: fluent-pdf
  * Domain Path: /assets/languages
  */
@@ -32,12 +32,26 @@
 defined('ABSPATH') or die;
 
 define('FLUENT_PDF', true);
-define('FLUENT_PDF_VERSION', '1.0.1');
-define('FLUENT_PDF_PATH', plugin_dir_path(__FILE__)); // For backward compatibility
+define('FLUENT_PDF_VERSION', '2.0.0');
+define('FLUENT_PDF_PATH', plugin_dir_path(__FILE__));
 define('FLUENT_PDF_URL', plugin_dir_url(__FILE__));
-define('FLUENTPDF_FRAMEWORK_UPGRADE', '1.0.0'); //TO REMOVE
+define('FLUENTPDF_FRAMEWORK_UPGRADE', '2.0.0');
 
 define('FLUENT_PDF_PRODUCTION', 'yes');
+
+// Fluent Forms compatibility constants — enables FF core's PDF UI
+if (!defined('FLUENTFORM_PDF_VERSION')) {
+    define('FLUENTFORM_PDF_VERSION', FLUENT_PDF_VERSION);
+}
+if (!defined('FLUENTFORM_PDF_PATH')) {
+    define('FLUENTFORM_PDF_PATH', FLUENT_PDF_PATH);
+}
+if (!defined('FLUENTFORM_PDF_URL')) {
+    define('FLUENTFORM_PDF_URL', FLUENT_PDF_URL);
+}
+if (!defined('FLUENTFORM_FRAMEWORK_UPGRADE')) {
+    define('FLUENTFORM_FRAMEWORK_UPGRADE', '2.0.0');
+}
 
 require_once FLUENT_PDF_PATH . 'vendor/autoload.php';
 require_once FLUENT_PDF_PATH . 'API/Pdf.php';
@@ -65,6 +79,14 @@ add_action('plugins_loaded', function() {
 
     (new FluentPdf())->boot();
 });
+
+// Load Fluent Forms integration at a later priority so we can detect
+// if the old fluentforms-pdf plugin already registered its hooks
+add_action('plugins_loaded', function() {
+    if (defined('FLUENTFORM') && function_exists('wpFluentForm')) {
+        (new FluentPdf\Modules\FluentForms\FluentFormsIntegration(wpFluentForm()))->register();
+    }
+}, 20);
 
 add_action('init', function() {
     (new FluentPdf\Classes\Controller\GlobalFontManager())->registerAjax();

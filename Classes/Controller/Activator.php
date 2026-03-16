@@ -2,6 +2,8 @@
 
 namespace FluentPdf\Classes\Controller;
 
+use FluentPdf\Modules\FluentForms\Migration;
+
 class Activator
 {
     public static function activate()
@@ -10,6 +12,11 @@ class Activator
 
         if (!wp_next_scheduled('fluent_pdf_cleanup_tmp_dir')) {
             wp_schedule_event(time(), 'daily', 'fluent_pdf_cleanup_tmp_dir');
+        }
+
+        // Migrate settings from old fluentforms-pdf plugin if Fluent Forms is active
+        if (defined('FLUENTFORM')) {
+            Migration::maybeRun();
         }
     }
 
